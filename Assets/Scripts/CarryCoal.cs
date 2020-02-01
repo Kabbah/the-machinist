@@ -7,7 +7,7 @@ public class CarryCoal : MonoBehaviour {
 
     private bool carryingCoal = false;
 
-    private bool canDropCoalInFurnace = false;
+    private Furnace nextFurnace = null;
     
     void Update() {
         this.GetCoal();
@@ -19,7 +19,7 @@ public class CarryCoal : MonoBehaviour {
             this.canGetCoal = true;
         }
         else if (collision.CompareTag("Furnace")) {
-            this.canDropCoalInFurnace = true;
+            this.nextFurnace = collision.GetComponent<Furnace>();
         }
     }
 
@@ -28,7 +28,8 @@ public class CarryCoal : MonoBehaviour {
             this.canGetCoal = false;
         }
         else if (collision.CompareTag("Furnace")) {
-            this.canDropCoalInFurnace = false;
+            
+            this.nextFurnace = null;
         }
     }
 
@@ -51,9 +52,9 @@ public class CarryCoal : MonoBehaviour {
         if (this.carryingCoal && this.DropCoalAction()) {
             Debug.Log("Dropped coal");
             this.carryingCoal = false;
-            if (this.canDropCoalInFurnace) {
+            if (this.nextFurnace != null) {
                 Debug.Log("Coal was dropped in furnace");
-                // TODO
+                this.nextFurnace.fix();
             }
         }
     }

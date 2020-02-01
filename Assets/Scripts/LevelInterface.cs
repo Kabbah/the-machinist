@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface LevelInterface {
-	string getLevelName();
-	string getNextLevelName();
+	int getLevelNumber();
 	Dictionary<int, GameObject> getIncidents();
 	int getLevelTime();
-
 }

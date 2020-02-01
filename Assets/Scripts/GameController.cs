@@ -4,18 +4,35 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
-    public static int bestUnlockedStage = 1;
+    private static GameController instance;
 
-    public static int GetBestUnlockedStage() => bestUnlockedStage;
-    public static void SetBestUnlockedStage(int stage) => bestUnlockedStage = stage;
+    public int bestUnlockedStage = 1;
+
+    public int GetBestUnlockedStage() => bestUnlockedStage;
+    public void SetBestUnlockedStage(int stage) => bestUnlockedStage = stage;
+
+
+     private void Awake() {
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad( this.gameObject );
+    }
     
-    public static void GoToMainMenu() {
+    public void GoToMainMenu() {
         SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
-    public static void GoToStage(int num) {
+    public void GoToStage(int num) {
         if (num <= bestUnlockedStage) {
-            SceneManager.LoadScene("stage" + num.ToString(), LoadSceneMode.Single);
+            SceneManager.LoadScene("world" + num.ToString(), LoadSceneMode.Single);
         }
+    }
+
+    public void GoToNextStage() {
+        SceneManager.LoadScene("world" + bestUnlockedStage.ToString(), LoadSceneMode.Single);
     }
 }
