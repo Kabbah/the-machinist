@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 1678789126}
   - component: {fileID: 1678789125}
   - component: {fileID: 1678789128}
+  - component: {fileID: 1678789129}
   m_Layer: 0
   m_Name: characterSprite
   m_TagString: Untagged
@@ -1062,7 +1063,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1678789129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678789124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db8c5cef5a65dd4994852dcb26abc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10
+  maxSpeed: 40
 --- !u!1 &1704805052
 GameObject:
   m_ObjectHideFlags: 0
