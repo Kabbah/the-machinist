@@ -7,6 +7,7 @@ TagManager:
   - Ladder
   - CoalPile
   - Furnace
+  - Valve
   layers:
   - Default
   - TransparentFX
