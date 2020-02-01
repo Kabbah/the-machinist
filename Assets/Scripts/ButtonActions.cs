@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonActions : MonoBehaviour {
     public void PlayButtonAction() {
-        SceneManager.LoadScene("world1Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("worldTestVitor", LoadSceneMode.Single);
     }
 
     public void ExitButtonAction() {

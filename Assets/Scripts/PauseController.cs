@@ -14,12 +14,16 @@ public class PauseController : MonoBehaviour {
         }
     }
 
-    public void ReturnToMenuButtonAction() {
+    public void returnToMenuButtonAction() {
         SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
     public void togglePauseMenu() {
         isPaused = !isPaused;
         pauseMenu.SetActive(isPaused);
+    }
+
+    public void nextLevelButtonAction() {
+        SceneManager.LoadScene("worldTestVitor", LoadSceneMode.Single);
     }
 }
