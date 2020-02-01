@@ -6,19 +6,19 @@ public class Valve : MonoBehaviour
 {
 
     private bool highPressureValve = true;
-    private string lastButton = "x";
+    private string lastButton = "PlayerAction";
     private int pressure = 10;
 
     void OnTriggerStay2D(Collider2D collider2D){
         if(highPressureValve){
-            if (Input.GetKeyDown("z") && !Input.GetKeyDown(lastButton)){
+            if (Input.GetButtonDown("PlayerAction") && !Input.GetKeyDown(lastButton)){
                 pressure--;
-                lastButton = "z";
+                lastButton = "PlayerSubAction";
                 Debug.Log("Funcionou + " + pressure.ToString());
             }
-            if (Input.GetKeyDown("x") && !Input.GetKeyDown(lastButton)){
+            if (Input.GetKeyDown("PlayerSubAction") && !Input.GetKeyDown(lastButton)){
                 pressure--;
-                lastButton = "x";
+                lastButton = "PlayerSubAction";
                 Debug.Log("Funcionou + " + pressure.ToString());
             }
             if (pressure == 0)
@@ -29,7 +29,7 @@ public class Valve : MonoBehaviour
     void OnTriggerExit2D(Collider2D collider2D){
         if (highPressureValve){
             pressure = 10;
-            lastButton = "x";
+            lastButton = "PlayerSubAction";
         }
         Debug.Log("Reset pressure = " + pressure.ToString());
     }
