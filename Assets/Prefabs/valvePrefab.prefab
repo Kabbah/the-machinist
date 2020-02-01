@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3711636716068022469}
   - component: {fileID: 3711636716068022472}
   m_Layer: 0
-  m_Name: valveSprite
+  m_Name: valvePrefab
   m_TagString: Valve
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,4 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f354d98bc7d43fab6c8134bfe35f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseMenu: {fileID: 0}
+  timeToFix: 0
+  timer: 0
+  isBroken: 0
   maxPressure: 10
+  spriteValveOk: {fileID: 21300000, guid: 6ce6b422623eebc2c9e57b64d12750d1, type: 3}
+  spriteValveBroken: {fileID: 21300000, guid: 0dbd1c289776101a69e2214523c96ea6, type: 3}
