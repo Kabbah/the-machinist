@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     
     private void move() {
         float horizontalMovement = Input.GetAxis("Horizontal");
-        if (this.rb.velocity.magnitude < maxSpeed) {
+        if (this.rb.velocity.magnitude < this.maxSpeed) {
             Vector2 movement = new Vector2(horizontalMovement, 0);
             this.rb.AddForce(this.force * movement);
         }
