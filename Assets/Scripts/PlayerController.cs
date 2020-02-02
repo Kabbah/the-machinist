@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
         this.rb = this.gameObject.GetComponent<Rigidbody2D>();
         
         someScale = transform.localScale.x; // assuming this is facing right
+        transform.localScale = new Vector2(-someScale, transform.localScale.y);
     }
 
     void Update() {
@@ -68,18 +69,14 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (transform.position.x < _posX)
-         {
-             if (direction == 1)
-             {
+        if (transform.position.x < _posX) {
+             if (direction == 1) {
                 transform.localScale = new Vector2(someScale, transform.localScale.y);
                  direction = -1;
              }
          }
-         else
-         {
-             if (direction == -1)
-             {
+         else if (transform.position.x > _posX) {
+            if (direction == -1) {
                 transform.localScale = new Vector2(-someScale, transform.localScale.y);
                  direction = 1;
              }

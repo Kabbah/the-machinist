@@ -37,7 +37,6 @@ public class PipeScrew : Machine {
                 if(Input.GetButtonDown(buttonPress)){
                     SoundManagerScript.playSound("hammer pipe");
                     animator.SetBool("isHittingPipe", true);
-                    Debug.Log("Iniciou animacao");
                 } /*else if (Input.GetButtonUp(buttonPress)){
                     animator.SetBool("isHittingPipe", false);
                 }*/
