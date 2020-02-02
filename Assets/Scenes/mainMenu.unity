@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9870cb3e35272f4cbaab51796c016cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestUnlockedStage: 1
+  bestUnlockedStage: 3
   actualStage: 1
 --- !u!4 &509540907
 Transform:
