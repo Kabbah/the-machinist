@@ -9,14 +9,21 @@ public class TurnValve : MonoBehaviour {
 
     private Valve valve = null;
 
+    public Animator animator;
+
     void Update() {
         if (this.valve != null) {
+
             if (this.TryToTurnValveRight()) {
                 this.valve.Turn(Valve.Direction.RIGHT);
             }
             else if (this.TryToTurnValveLeft()) {
                 this.valve.Turn(Valve.Direction.LEFT);
             }
+        }
+
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0){
+            animator.SetBool("isTurningValve", false);
         }
     }
 
@@ -36,10 +43,19 @@ public class TurnValve : MonoBehaviour {
     }
 
     private bool TryToTurnValveRight() {
-        return Input.GetButtonDown(playerAction);
+        
+        if (Input.GetButtonDown(playerAction)){
+            animator.SetBool("isTurningValve", true);
+            return true;
+        }
+        return false;
     }
 
     private bool TryToTurnValveLeft() {
-        return Input.GetButtonDown(playerSubAction);
+        if (Input.GetButtonDown(playerSubAction)){
+            animator.SetBool("isTurningValve", true);
+            return true;
+        }
+        return false;
     }
 }

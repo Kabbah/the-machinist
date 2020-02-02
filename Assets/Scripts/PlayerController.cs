@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour {
     public float maxSpeed = 5;
 
     public bool isOnLadder = false;
+    public bool isMovingH = false;
+    public bool isMovingV = false;
 
     private Rigidbody2D rb;
     
     public float runSpeed = 30.0f;
 
     public float horizontalMove = 0.0f;
+    public float verticalMove = 0.0f;
     public Animator animator;
 
     public float direction;
@@ -32,8 +35,38 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        if(!SoundManagerScript.audioSrc.isPlaying){
+            if(Mathf.Abs(horizontalMove) > 0){
+                isMovingH = true;
+            } else {
+                isMovingH = false;
+            }
+
+
+            if(isMovingH){
+                SoundManagerScript.playSound("running boat");
+            } else if (!isMovingH){
+                SoundManagerScript.audioSrc.Stop();
+            }
+        }
+
+        if(!SoundManagerScript.audioSrc.isPlaying){
+            if(Mathf.Abs(verticalMove) > 0){
+                isMovingV = true;
+            } else {
+                isMovingV = false;
+            }
+
+            if(isMovingV){
+                SoundManagerScript.playSound("subir escada1");
+            } else if (!isMovingV){
+                SoundManagerScript.audioSrc.Stop();
+            }
+        }
 
         if (transform.position.x < _posX)
          {
@@ -62,6 +95,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.CompareTag("Ladder")) {
             this.rb.gravityScale = 0.0f;
             this.isOnLadder = true;
+            animator.SetBool("isOnLadder", true);
         }
     }
 
@@ -69,6 +103,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.CompareTag("Ladder")) {
             this.rb.gravityScale = 1.0f;
             this.isOnLadder = false;
+            animator.SetBool("isOnLadder", false);
         }
     }
 
@@ -76,7 +111,7 @@ public class PlayerController : MonoBehaviour {
         this.move();
     }
     
-    private void move() {
+    private void move() {       
         float horizontalMovement = Input.GetAxis("Horizontal");
         if (this.rb.velocity.magnitude < this.maxSpeed) {
             Vector2 movement = new Vector2(horizontalMovement, 0);
