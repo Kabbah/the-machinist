@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level1Config : MonoBehaviour, LevelInterface {
+public class Level10Config : MonoBehaviour, LevelInterface {
     public int getLevelNumber() {
-        return 1;
+        return 10;
     }
 
     public Dictionary<int, GameObject> getIncidents() {
