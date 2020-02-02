@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level11Config : MonoBehaviour, LevelInterface {
+public class Level5Config : MonoBehaviour, LevelInterface {
     public int getLevelNumber() {
         return 11;
     }
