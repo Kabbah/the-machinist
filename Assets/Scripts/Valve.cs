@@ -20,7 +20,7 @@ public class Valve : Machine {
     }
 
     void Start() {
-        this.timeToFix = 5.0f;
+        this.timeToFix = 10.0f;
     }
 
     public void Turn(Direction direction) {
