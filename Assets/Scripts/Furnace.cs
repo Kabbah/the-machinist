@@ -23,7 +23,6 @@ public class Furnace : Machine {
             this.isBroken = true;
             this.timer = this.timeToFix;
             animator.SetBool("FurnaceIsBroken", true);
-            //GetComponent<SpriteRenderer>().sprite = spriteFurnaceBroken;
         }
     }
 

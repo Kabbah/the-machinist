@@ -7,12 +7,14 @@ public class MachineTimerBar : MonoBehaviour {
     public GameObject progressBarPrefab;
 
     public void updateBar(float actual, float max) {
-        //Debug.Log("Update bar - actual: " + actual.ToString() + " max: " + max.ToString());
+        Transform frontbar = progressBar.transform.Find("machineFrontbar");
+        float perc = actual / max;
+        frontbar.localScale = new Vector3(0.8f*perc, 0.1f, 1.0f);
     }
 
-    public void initBar() {
+    public void initBar(float offsetX, float offsetY) {
         Debug.Log("Init bar");
-        progressBar = Instantiate(progressBarPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        progressBar = Instantiate(progressBarPrefab, new Vector3(transform.position.x+offsetX, transform.position.y+offsetY, transform.position.z), Quaternion.identity);
     }
 
     public void closeBar() {

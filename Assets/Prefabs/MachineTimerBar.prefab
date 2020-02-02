@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7229482496278506912}
   - component: {fileID: 6754753384676044091}
   m_Layer: 0
-  m_Name: machineFrontbarSprite
+  m_Name: machineFrontbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 448095845416437673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.1294675, y: -0.86207885, z: 128.25781}
-  m_LocalScale: {x: 0.86, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4764879110666007139}
   m_RootOrder: 1
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 7df00634f91857e4b8cf13806c073e5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2544878181651999002}
   - component: {fileID: 6229929385190066308}
   m_Layer: 0
-  m_Name: machineBackbarSprite
+  m_Name: machineBackbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 1740659942906607409}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.1294675, y: -0.86207885, z: 128.25781}
-  m_LocalScale: {x: 0.86, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4764879110666007139}
   m_RootOrder: 0
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f1459ac07cd37ee479509dc43afc420a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

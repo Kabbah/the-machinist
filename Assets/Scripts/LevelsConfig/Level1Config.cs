@@ -9,7 +9,8 @@ public class Level1Config : MonoBehaviour, LevelInterface {
 
     public Dictionary<int, GameObject> getIncidents() {
         Dictionary<int, GameObject> incidents = new Dictionary<int, GameObject>();
-        incidents.Add(9, GameObject.Find("pipe2"));
+        incidents.Add(19, GameObject.Find("valve1"));
+        incidents.Add(10, GameObject.Find("pipe2"));
         return incidents;
     }
 

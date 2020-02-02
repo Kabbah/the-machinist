@@ -62,7 +62,7 @@ public class Valve : Machine {
             this.isBroken = true;
             this.Reset();
             this.timer = this.timeToFix;
-            machineTimerBar.initBar();
+            machineTimerBar.initBar(2.1f, 1.7f);
             GetComponent<SpriteRenderer>().sprite = spriteValveBroken;
         }
     }
