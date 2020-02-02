@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Furnace : Machine {
 
-    //public Sprite spriteFurnaceOk;
-
-    //public Sprite spriteFurnaceBroken;
-
     public Animator animator;
 
+    private MachineTimerBar machineTimerBar;
+
     void Start() {
-        timeToFix = 20.0f;
+        timeToFix = 10.0f;
+        machineTimerBar = this.gameObject.GetComponent<MachineTimerBar>();
     }
 
     void FixedUpdate() {
@@ -22,6 +21,7 @@ public class Furnace : Machine {
         if(!this.isBroken){
             this.isBroken = true;
             this.timer = this.timeToFix;
+            machineTimerBar.initBar(2.1f, 1.7f);
             animator.SetBool("FurnaceIsBroken", true);
         }
     }
@@ -35,13 +35,14 @@ public class Furnace : Machine {
                 loseMenu.SetActive(true);
             } else {
                 timer -= Time.deltaTime;
+                machineTimerBar.updateBar(timer, timeToFix);
             }
         }
     }
 
     public override void fix() {
         this.isBroken = false;
+        machineTimerBar.closeBar();
         animator.SetBool("FurnaceIsBroken", false);
-        //GetComponent<SpriteRenderer>().sprite = spriteFurnaceOk;
     }
 }

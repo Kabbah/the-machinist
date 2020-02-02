@@ -35,7 +35,6 @@ public class Valve : Machine {
             this.nextDirection = (direction == Direction.RIGHT)? Direction.LEFT : Direction.RIGHT;
 
             if (--this.pressure <= 0) {
-                machineTimerBar.closeBar();
                 fix();
             }
         }
@@ -43,6 +42,7 @@ public class Valve : Machine {
 
     public override void fix() {
         this.isBroken = false;
+        machineTimerBar.closeBar();
         GetComponent<SpriteRenderer>().sprite = spriteValveOk;
     }
 

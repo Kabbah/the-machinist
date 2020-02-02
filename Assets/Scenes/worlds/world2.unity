@@ -133,11 +133,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: valve1
       objectReference: {fileID: 0}
-    - target: {fileID: 3711636716068022469, guid: c77b2454c2aa91245a764e75aed97c3c,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3711636716068022471, guid: c77b2454c2aa91245a764e75aed97c3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,12 +193,6 @@ PrefabInstance:
       propertyPath: loseMenu
       value: 
       objectReference: {fileID: 1754846868}
-    - target: {fileID: 3711636716068022472, guid: c77b2454c2aa91245a764e75aed97c3c,
-        type: 3}
-      propertyPath: spriteValveBroken
-      value: 
-      objectReference: {fileID: 82200488288620374, guid: 042de7865e1d629499e6bffaafb9b134,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c77b2454c2aa91245a764e75aed97c3c, type: 3}
 --- !u!1001 &102547315
@@ -555,6 +544,26 @@ PrefabInstance:
       objectReference: {fileID: 1754846868}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c5f19bfbb70e002be671dd1cac8b63, type: 3}
+--- !u!1 &139148189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921673777603767489, guid: 04c5f19bfbb70e002be671dd1cac8b63,
+    type: 3}
+  m_PrefabInstance: {fileID: 139148188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &139148190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139148189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9118021334999a74b9f6517d7850a49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBarPrefab: {fileID: 6431328505476162590, guid: c4b61b6f909d2d948838a2fbd59eae8b,
+    type: 3}
 --- !u!1001 &176518331
 PrefabInstance:
   m_ObjectHideFlags: 0

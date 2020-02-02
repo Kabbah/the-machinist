@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7088638173537153441}
   - component: {fileID: 8269817195024361351}
   - component: {fileID: 8623343279668366315}
+  - component: {fileID: 1623747184}
   m_Layer: 0
   m_Name: pipe_curve_down_right
   m_TagString: Untagged
@@ -131,4 +132,18 @@ MonoBehaviour:
     type: 3}
   animator: {fileID: 0}
   spritePipeBroken: {fileID: -4300972112944968278, guid: 042de7865e1d629499e6bffaafb9b134,
+    type: 3}
+--- !u!114 &1623747184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406506728366448806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9118021334999a74b9f6517d7850a49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBarPrefab: {fileID: 6431328505476162590, guid: c4b61b6f909d2d948838a2fbd59eae8b,
     type: 3}

@@ -15,12 +15,15 @@ public class PipeScrew : Machine {
 
     public Sprite spritePipeBroken;
 
+    private MachineTimerBar machineTimerBar;
+
     void FixedUpdate() {
         brokeLoop();
     }
 
     void Start() {
         this.timeToFix = 10.0f;
+        machineTimerBar = this.gameObject.GetComponent<MachineTimerBar>();
     }
 
     private void Update() {
@@ -65,7 +68,7 @@ public class PipeScrew : Machine {
             this.isBroken = true;
             this.Reset();
             this.timer = this.timeToFix;
-            
+            machineTimerBar.initBar(2.1f, 1.7f);
             GetComponent<SpriteRenderer>().sprite = spritePipeBroken;
         }
     }
@@ -80,12 +83,14 @@ public class PipeScrew : Machine {
             }
             else {
                 timer -= Time.deltaTime;
+                machineTimerBar.updateBar(timer, timeToFix);
             }
         }
     }
 
     public override void fix() {
         this.isBroken = false;
+        machineTimerBar.closeBar();
         GetComponent<SpriteRenderer>().sprite = spritePipeOk;
     }
 }
