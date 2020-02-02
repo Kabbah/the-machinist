@@ -7,28 +7,14 @@ public class Furnace : Machine {
     public Animator animator;
 
     private MachineTimerBar machineTimerBar;
-    private Tooltip tooltip;
 
     void Start() {
         timeToFix = 10.0f;
         machineTimerBar = this.gameObject.GetComponent<MachineTimerBar>();
-        tooltip = this.gameObject.GetComponent<Tooltip>();
     }
 
     void FixedUpdate() {
         brokeLoop();
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision) {
-        if (tooltip != null && collision.CompareTag("Player")) {
-            tooltip.Show(2.1f, -1.7f);
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D collision) {
-        if (tooltip != null && collision.CompareTag("Player")) {
-            tooltip.Hide();
-        }
     }
 
     public override void stop() {
