@@ -9,11 +9,7 @@ public class PipeScrew : Machine {
 
     private bool canFixPipe = false;
 
-    public Sprite spritePipeOk;
-
     public Animator animator;
-
-    public Sprite spritePipeBroken;
 
     private MachineTimerBar machineTimerBar;
 
@@ -69,7 +65,8 @@ public class PipeScrew : Machine {
             this.Reset();
             this.timer = this.timeToFix;
             machineTimerBar.initBar(2.1f, 1.7f);
-            GetComponent<SpriteRenderer>().sprite = spritePipeBroken;
+            transform.Find("SteamAnimationGameObject").gameObject.SetActive(true);
+            //GetComponent<SpriteRenderer>().sprite = spritePipeBroken;
         }
     }
 
@@ -91,6 +88,7 @@ public class PipeScrew : Machine {
     public override void fix() {
         this.isBroken = false;
         machineTimerBar.closeBar();
-        GetComponent<SpriteRenderer>().sprite = spritePipeOk;
+        transform.Find("SteamAnimationGameObject").gameObject.SetActive(false);
+        //GetComponent<SpriteRenderer>().sprite = spritePipeOk;
     }
 }
