@@ -164,6 +164,9 @@ TextureImporter:
   - first:
       213: -7883116718873341320
     second: assets_18
+  - first:
+      213: -7675683435551358985
+    second: assets_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -357,7 +360,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 409
-        y: 406
+        y: 408
         width: 22
         height: 72
       alignment: 0
@@ -1008,7 +1011,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 336
+        y: 360
         width: 60
         height: 72
       alignment: 0
@@ -1028,9 +1031,9 @@ TextureImporter:
       name: assets_15
       rect:
         serializedVersion: 2
-        x: 171
-        y: 336
-        width: 18
+        x: 150
+        y: 360
+        width: 60
         height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1053,8 +1056,8 @@ TextureImporter:
         y: 360
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.518369, y: 0.4816297}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

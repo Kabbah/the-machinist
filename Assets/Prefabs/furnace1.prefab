@@ -127,8 +127,7 @@ MonoBehaviour:
   timeToFix: 10
   timer: 0
   isBroken: 0
-  spriteFurnaceOk: {fileID: 21300000, guid: cb94d2b4db5ce124b942cea05a1ac38b, type: 3}
-  spriteFurnaceBroken: {fileID: 0}
+  animator: {fileID: 1893728847}
 --- !u!95 &1893728847
 Animator:
   serializedVersion: 3

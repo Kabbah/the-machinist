@@ -11,6 +11,8 @@ public class PipeScrew : Machine {
 
     public Sprite spritePipeOk;
 
+    public Animator animator;
+
     public Sprite spritePipeBroken;
 
     void FixedUpdate() {
@@ -30,6 +32,17 @@ public class PipeScrew : Machine {
             if (this.timesToPress == 0) {
                 this.fix();
             }
+
+            if(canFixPipe){
+                if(Input.GetButtonDown(buttonPress)){
+                    animator.SetBool("isHittingPipe", true);
+                } /*else if (Input.GetButtonUp(buttonPress)){
+                    animator.SetBool("isHittingPipe", false);
+                }*/
+            } 
+        }
+        if(!canFixPipe || (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)){
+            animator.SetBool("isHittingPipe", false);
         }
     }
 
@@ -55,6 +68,7 @@ public class PipeScrew : Machine {
             this.isBroken = true;
             this.Reset();
             this.timer = this.timeToFix;
+            
             GetComponent<SpriteRenderer>().sprite = spritePipeBroken;
         }
     }

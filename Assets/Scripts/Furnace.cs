@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Furnace : Machine {
 
+    //public Sprite spriteFurnaceOk;
+
+    //public Sprite spriteFurnaceBroken;
+
+    public Animator animator;
+
     void Start() {
         timeToFix = 20.0f;
     }
@@ -16,6 +22,9 @@ public class Furnace : Machine {
         if(!this.isBroken){
             this.isBroken = true;
             this.timer = this.timeToFix;
+            animator.SetBool("FurnaceIsBroken", true);
+            //GetComponent<SpriteRenderer>().sprite = spriteFurnaceBroken;
+            Debug.Log("Stop furnace");
         }
     }
 
@@ -34,6 +43,7 @@ public class Furnace : Machine {
 
     public override void fix() {
         this.isBroken = false;
-        GetComponent<Animator>().Play("Fogo_forte");
+        animator.SetBool("FurnaceIsBroken", false);
+        //GetComponent<SpriteRenderer>().sprite = spriteFurnaceOk;
     }
 }
