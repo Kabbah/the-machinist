@@ -29,7 +29,6 @@ public class Valve : Machine {
         }
 
         if (this.nextDirection == Direction.ANY || this.nextDirection == direction) {
-            Debug.Log("Turned valve");
             this.nextDirection = (direction == Direction.RIGHT)? Direction.LEFT : Direction.RIGHT;
 
             if (--this.pressure <= 0) {
@@ -39,7 +38,6 @@ public class Valve : Machine {
     }
 
     public override void fix() {
-        Debug.Log("Turn valve complete");
         this.isBroken = false;
         GetComponent<SpriteRenderer>().sprite = spriteValveOk;
     }
@@ -52,7 +50,6 @@ public class Valve : Machine {
     void OnTriggerExit2D(Collider2D collision) {
         if (this.isBroken && collision.CompareTag("Player")) {
             this.Reset();
-            Debug.Log("Valve reset");
         }
     }
 
@@ -62,7 +59,6 @@ public class Valve : Machine {
             this.Reset();
             this.timer = this.timeToFix;
             GetComponent<SpriteRenderer>().sprite = spriteValveBroken;
-            Debug.Log("Stop valve");
         }
     }
 

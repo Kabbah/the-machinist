@@ -23,7 +23,7 @@ public class timerController : MonoBehaviour
     }
 
     void Update() {
-        if(timer <= 0.0f && !victoryMenu.active){
+        if(timer <= 0.0f && !victoryMenu.activeSelf){
             timer = 0.0f;
             Time.timeScale = 0f;
             gameController.UpdateBestUnlockStage();
@@ -32,7 +32,6 @@ public class timerController : MonoBehaviour
             timer -= Time.deltaTime;
             int second = Mathf.FloorToInt(timer);
             if(incidents.ContainsKey(second)) {
-                Debug.Log(second);
                 GameObject machine = incidents[second];
                 machine.GetComponent<Machine>().stop();
                 incidents.Remove(second);

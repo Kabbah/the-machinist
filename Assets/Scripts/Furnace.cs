@@ -16,7 +16,6 @@ public class Furnace : Machine {
         if(!this.isBroken){
             this.isBroken = true;
             this.timer = this.timeToFix;
-            Debug.Log("Stop furnace");
         }
     }
 
@@ -33,7 +32,6 @@ public class Furnace : Machine {
     }
 
     public override void fix() {
-        Debug.Log("Furnace complete");
         this.isBroken = false;
         GetComponent<Animator>().Play("Fogo_forte");
     }
