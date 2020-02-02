@@ -129,5 +129,6 @@ MonoBehaviour:
   maxTimesToPress: 10
   spritePipeOk: {fileID: 2695789196849341569, guid: 042de7865e1d629499e6bffaafb9b134,
     type: 3}
+  animator: {fileID: 0}
   spritePipeBroken: {fileID: -4409421761062529593, guid: 042de7865e1d629499e6bffaafb9b134,
     type: 3}

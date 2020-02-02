@@ -76,11 +76,9 @@ public class CarryCoal : MonoBehaviour {
         if (this.carryingCoal && this.DropCoalAction()) {
             this.carryingCoal = false;
             animator.SetBool("isHoldingShovel", false);
-            Debug.Log(animator.GetBool("isHoldingShovel"));
             SoundManagerScript.audioSrc.Stop();
             if (this.nextFurnace != null) {
                 SoundManagerScript.playSound("droping coal");
-                Debug.Log("Coal was dropped in furnace");
                 this.nextFurnace.fix();
             }
         }

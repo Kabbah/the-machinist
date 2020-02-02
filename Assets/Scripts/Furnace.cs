@@ -24,7 +24,6 @@ public class Furnace : Machine {
             this.timer = this.timeToFix;
             animator.SetBool("FurnaceIsBroken", true);
             //GetComponent<SpriteRenderer>().sprite = spriteFurnaceBroken;
-            Debug.Log("Stop furnace");
         }
     }
 

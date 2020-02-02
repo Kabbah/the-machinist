@@ -76,13 +76,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4324526634184830684, guid: a9b3bdbc1526f30fdae6bedbf51d185a,
+  m_Sprite: {fileID: 4748470198486955293, guid: 042de7865e1d629499e6bffaafb9b134,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.15, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,8 +105,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6, y: 0.6}
-    newSize: {x: 0.6, y: 0.6}
+    oldSize: {x: 0.15, y: 0.24}
+    newSize: {x: 0.15, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -150,8 +150,11 @@ MonoBehaviour:
   force: 20
   maxSpeed: 3
   isOnLadder: 0
+  isMovingH: 0
+  isMovingV: 0
   runSpeed: 30
   horizontalMove: 0
+  verticalMove: 0
   animator: {fileID: 811637174}
   direction: 0
   someScale: 0
@@ -181,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea9cd30c783a894893d51922f5140a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 811637174}
 --- !u!95 &811637174
 Animator:
   serializedVersion: 3
