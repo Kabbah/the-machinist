@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
     public static AudioClip droppingCoal, pickingUpCoal, runningAround, fadingSteam, 
-                    increasingSteam, goingUp, goingDown, turningValve;
+                    increasingSteam, goingUp, hammerHit, turningValve;
 
     public static AudioSource audioSrc;
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class SoundManagerScript : MonoBehaviour
         fadingSteam = Resources.Load<AudioClip> ("steam going away");
         increasingSteam = Resources.Load<AudioClip> ("steam pipe");
         goingUp = Resources.Load<AudioClip> ("subir escada1");
-        goingDown = Resources.Load<AudioClip> ("subir escada2");
+        hammerHit = Resources.Load<AudioClip> ("hammer pipe");
         turningValve = Resources.Load<AudioClip> ("virando manivela");
 
         audioSrc = GetComponent<AudioSource> ();
@@ -43,8 +43,8 @@ public class SoundManagerScript : MonoBehaviour
             case "subir escada1":
                 audioSrc.PlayOneShot(goingUp);
                 break;
-            case "subir escada2":
-                audioSrc.PlayOneShot(goingDown);
+            case "hammer pipe":
+                audioSrc.PlayOneShot(hammerHit);
                 break;
             case "virando manivela":
                 audioSrc.PlayOneShot(turningValve);
