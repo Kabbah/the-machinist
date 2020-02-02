@@ -30,9 +30,10 @@ public class timerController : MonoBehaviour
         if(timer <= 0.0f && !victoryMenu.activeSelf){
             timer = 0.0f;
             Time.timeScale = 0f;
-            gameController.UpdateBestUnlockStage();
+            int bestUnlockStage =  gameController.UpdateBestUnlockStage();
             PauseController.isEndGame = true;
             victoryMenu.SetActive(true);
+            victoryMenu.transform.Find("NextLevelButton").gameObject.SetActive(levelConfig.getLevelNumber() != bestUnlockStage);
         } else {
             timer -= Time.deltaTime;
             int second = Mathf.FloorToInt(timer);

@@ -25,8 +25,19 @@ public class GameController : MonoBehaviour {
         DontDestroyOnLoad( this.gameObject );
     }
 
-    public void UpdateBestUnlockStage() {
-        this.bestUnlockedStage += 1;
+    public int UpdateBestUnlockStage() {
+
+        List<string> scenesInBuild = new List<string>();
+        for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++) {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            int lastSlash = scenePath.LastIndexOf("/");
+            scenesInBuild.Add(scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1));
+        }
+
+        if(scenesInBuild.Contains("world" + (this.bestUnlockedStage + 1))) {
+            this.bestUnlockedStage += 1;
+        }
+        return this.bestUnlockedStage;
     }
 
     public void SetActualStage(int stage) {

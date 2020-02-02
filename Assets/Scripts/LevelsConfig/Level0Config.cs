@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level0Config : MonoBehaviour, LevelInterface {
+
     public int getLevelNumber() {
         return 0;
     }

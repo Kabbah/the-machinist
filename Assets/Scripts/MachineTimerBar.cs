@@ -13,12 +13,10 @@ public class MachineTimerBar : MonoBehaviour {
     }
 
     public void initBar(float offsetX, float offsetY) {
-        Debug.Log("Init bar");
         progressBar = Instantiate(progressBarPrefab, new Vector3(transform.position.x+offsetX, transform.position.y+offsetY, transform.position.z), Quaternion.identity);
     }
 
     public void closeBar() {
-        Debug.Log("Close bar");
         Destroy(progressBar);
     }
 }
