@@ -505,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 1921673777603767491, guid: 04c5f19bfbb70e002be671dd1cac8b63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4196396
+      value: -2.74
       objectReference: {fileID: 0}
     - target: {fileID: 1921673777603767491, guid: 04c5f19bfbb70e002be671dd1cac8b63,
         type: 3}
@@ -552,6 +552,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3538817389557512356, guid: 04c5f19bfbb70e002be671dd1cac8b63,
+        type: 3}
+      propertyPath: spriteFurnaceOk
+      value: 
+      objectReference: {fileID: -8246659729356840833, guid: cb94d2b4db5ce124b942cea05a1ac38b,
+        type: 3}
+    - target: {fileID: 3538817389557512356, guid: 04c5f19bfbb70e002be671dd1cac8b63,
+        type: 3}
+      propertyPath: spriteFurnaceBroken
+      value: 
+      objectReference: {fileID: 21300000, guid: e9b500293c38a8c0ebdd8b080b621d0b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c5f19bfbb70e002be671dd1cac8b63, type: 3}
 --- !u!1 &316252117
@@ -1588,7 +1600,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1612,7 +1624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849875279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: -10}
+  m_LocalPosition: {x: -1, y: 1.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 0.98749}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1631,7 +1643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1683425573}
-  isPaused: 0
 --- !u!1 &1116026635
 GameObject:
   m_ObjectHideFlags: 0
