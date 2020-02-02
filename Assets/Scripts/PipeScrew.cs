@@ -35,14 +35,12 @@ public class PipeScrew : Machine {
 
             if(canFixPipe){
                 if(Input.GetButtonDown(buttonPress)){
+                    SoundManagerScript.playSound("hammer pipe");
                     animator.SetBool("isHittingPipe", true);
                 } /*else if (Input.GetButtonUp(buttonPress)){
                     animator.SetBool("isHittingPipe", false);
                 }*/
             } 
-        }
-        if(!canFixPipe || (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)){
-            animator.SetBool("isHittingPipe", false);
         }
     }
 
@@ -56,6 +54,7 @@ public class PipeScrew : Machine {
         if (isBroken && collision.CompareTag("Player")) {
             this.Reset();
         }
+        animator.SetBool("isHittingPipe", false);
         this.canFixPipe = false;
     }
 
