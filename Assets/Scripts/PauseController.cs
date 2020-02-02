@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour {
 
+    public static bool isPaused = false;
     public GameObject pauseMenu;
-    public bool isPaused = false;
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -21,6 +21,12 @@ public class PauseController : MonoBehaviour {
     public void togglePauseMenu() {
         isPaused = !isPaused;
         pauseMenu.SetActive(isPaused);
+
+        if(isPaused){
+            Time.timeScale = 0f;
+        } else {
+            Time.timeScale = 1f;
+        }
     }
 
     public void nextLevelButtonAction() {
