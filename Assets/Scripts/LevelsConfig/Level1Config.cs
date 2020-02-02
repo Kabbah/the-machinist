@@ -9,13 +9,13 @@ public class Level1Config : MonoBehaviour, LevelInterface {
     }
     public Dictionary<int, GameObject> getIncidents() {
         Dictionary<int, GameObject> incidents = new Dictionary<int, GameObject>();
-        incidents.Add(19, GameObject.Find("furnace1"));
-        incidents.Add(15, GameObject.Find("valve1"));
-        incidents.Add(10, GameObject.Find("furnace1"));
+        incidents.Add(40, GameObject.Find("pipe1"));
+        incidents.Add(30, GameObject.Find("furnace1"));
+        incidents.Add(15, GameObject.Find("pipe2"));
         return incidents;
     }
 
     public int getLevelTime() {
-        return 20;
+        return 45;
     }
 }

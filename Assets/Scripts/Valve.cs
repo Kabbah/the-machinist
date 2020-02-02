@@ -22,7 +22,7 @@ public class Valve : Machine {
     }
 
     void Start() {
-        this.timeToFix = 10.0f;
+        this.timeToFix = 15.0f;
         machineTimerBar = this.gameObject.GetComponent<MachineTimerBar>();
     }
 

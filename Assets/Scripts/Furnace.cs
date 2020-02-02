@@ -9,7 +9,7 @@ public class Furnace : Machine {
     private MachineTimerBar machineTimerBar;
 
     void Start() {
-        timeToFix = 10.0f;
+        timeToFix = 20.0f;
         machineTimerBar = this.gameObject.GetComponent<MachineTimerBar>();
     }
 
