@@ -94,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -122,3 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc245ac0d9082d0db4f58caba0ee065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseMenu: {fileID: 0}
+  timeToFix: 10
+  timer: 0
+  isBroken: 0
+  maxTimesToPress: 10
+  spritePipeOk: {fileID: 2695789196849341569, guid: 042de7865e1d629499e6bffaafb9b134,
+    type: 3}
+  spritePipeBroken: {fileID: -4409421761062529593, guid: 042de7865e1d629499e6bffaafb9b134,
+    type: 3}
