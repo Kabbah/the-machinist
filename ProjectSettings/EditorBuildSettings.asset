@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/mainMenu.unity
     guid: 0cf93db66364424689195597c6fd7593
   - enabled: 1
-    path: Assets/Scenes/world1.unity
+    path: Assets/Scenes/worldSelectMenu.unity
+    guid: a8c28a57b47fea245b79653604f42648
+  - enabled: 1
+    path: Assets/Scenes/worldS/world0.unity
     guid: 180f6b6e91d11aad7a20eb257ab76670
+  - enabled: 1
+    path: Assets/Scenes/worldS/world1.unity
+    guid: 16b94702d23a2e74c85d5fcfa3e4f2ff
+  - enabled: 1
+    path: Assets/Scenes/worldS/world2.unity
+    guid: 89e3ae8d7371baf4bb49f0cc877d3ed9
   m_configObjects: {}

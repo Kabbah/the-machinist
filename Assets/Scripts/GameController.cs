@@ -7,8 +7,11 @@ public class GameController : MonoBehaviour {
     private static GameController instance;
 
     public int bestUnlockedStage = 1;
+    public int actualStage = 1;
 
     public int GetBestUnlockedStage() => bestUnlockedStage;
+
+    public int GetActualStage() => actualStage;
     public void SetBestUnlockedStage(int stage) => bestUnlockedStage = stage;
 
 
@@ -21,18 +24,13 @@ public class GameController : MonoBehaviour {
         instance = this;
         DontDestroyOnLoad( this.gameObject );
     }
-    
-    public void GoToMainMenu() {
-        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
+
+    public void UpdateBestUnlockStage() {
+        this.bestUnlockedStage += 1;
     }
 
-    public void GoToStage(int num) {
-        if (num <= bestUnlockedStage) {
-            SceneManager.LoadScene("world" + num.ToString(), LoadSceneMode.Single);
-        }
+    public void SetActualStage(int stage) {
+        this.actualStage = stage;
     }
 
-    public void GoToNextStage() {
-        SceneManager.LoadScene("world" + bestUnlockedStage.ToString(), LoadSceneMode.Single);
-    }
 }

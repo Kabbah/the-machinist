@@ -14,6 +14,7 @@ public class timerController : MonoBehaviour
     public LevelInterface levelConfig;
 
     void Start() {
+        Time.timeScale = 1f;
         this.levelConfig = this.GetComponent<LevelInterface>();
         this.timer = levelConfig.getLevelTime();
         this.incidents = levelConfig.getIncidents();
