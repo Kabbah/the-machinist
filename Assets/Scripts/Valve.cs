@@ -14,6 +14,8 @@ public class Valve : Machine {
     public Sprite spriteValveBroken;
 
     private Direction nextDirection = Direction.ANY;
+
+    private MachineTimerBar machineTimerBar;
     
     void FixedUpdate() {
         brokeLoop();
@@ -21,6 +23,7 @@ public class Valve : Machine {
 
     void Start() {
         this.timeToFix = 10.0f;
+        machineTimerBar = this.gameObject.GetComponent<MachineTimerBar>();
     }
 
     public void Turn(Direction direction) {
@@ -32,6 +35,7 @@ public class Valve : Machine {
             this.nextDirection = (direction == Direction.RIGHT)? Direction.LEFT : Direction.RIGHT;
 
             if (--this.pressure <= 0) {
+                machineTimerBar.closeBar();
                 fix();
             }
         }
@@ -58,6 +62,7 @@ public class Valve : Machine {
             this.isBroken = true;
             this.Reset();
             this.timer = this.timeToFix;
+            machineTimerBar.initBar();
             GetComponent<SpriteRenderer>().sprite = spriteValveBroken;
         }
     }
@@ -71,6 +76,7 @@ public class Valve : Machine {
                 loseMenu.SetActive(true);
             } else {
                 timer -= Time.deltaTime;
+                machineTimerBar.updateBar(timer, timeToFix);
             }
         }
     }

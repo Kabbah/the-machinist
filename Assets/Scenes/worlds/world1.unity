@@ -133,11 +133,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: valve1
       objectReference: {fileID: 0}
-    - target: {fileID: 3711636716068022469, guid: c77b2454c2aa91245a764e75aed97c3c,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3711636716068022471, guid: c77b2454c2aa91245a764e75aed97c3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,12 +193,6 @@ PrefabInstance:
       propertyPath: loseMenu
       value: 
       objectReference: {fileID: 1754846868}
-    - target: {fileID: 3711636716068022472, guid: c77b2454c2aa91245a764e75aed97c3c,
-        type: 3}
-      propertyPath: spriteValveBroken
-      value: 
-      objectReference: {fileID: 82200488288620374, guid: 042de7865e1d629499e6bffaafb9b134,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c77b2454c2aa91245a764e75aed97c3c, type: 3}
 --- !u!1001 &102547315
