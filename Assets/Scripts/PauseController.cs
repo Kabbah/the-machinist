@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour {
 
     public static bool isPaused = false;
+    public static bool isEndGame = false;
     public GameObject pauseMenu;
+
+    void Start() {
+        isPaused = false;
+        isEndGame = false;
+    }
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -19,6 +25,9 @@ public class PauseController : MonoBehaviour {
     }
 
     public void togglePauseMenu() {
+        if(isEndGame) {
+            return;
+        }
         isPaused = !isPaused;
         pauseMenu.SetActive(isPaused);
 
@@ -27,9 +36,5 @@ public class PauseController : MonoBehaviour {
         } else {
             Time.timeScale = 1f;
         }
-    }
-
-    public void nextLevelButtonAction() {
-        SceneManager.LoadScene("worldTestVitor", LoadSceneMode.Single);
     }
 }

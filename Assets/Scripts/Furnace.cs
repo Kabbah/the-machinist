@@ -32,7 +32,9 @@ public class Furnace : Machine {
         if(this.isBroken) {
             if(this.timer <= 0.0f){
                 timer = 0.0f;
-        	    loseMenu.SetActive(true);
+                Time.timeScale = 0f;
+                PauseController.isEndGame = true;
+                loseMenu.SetActive(true);
             } else {
                 timer -= Time.deltaTime;
             }
@@ -40,7 +42,6 @@ public class Furnace : Machine {
     }
 
     public override void fix() {
-        Debug.Log("Furnace complete");
         this.isBroken = false;
         animator.SetBool("FurnaceIsBroken", false);
         //GetComponent<SpriteRenderer>().sprite = spriteFurnaceOk;

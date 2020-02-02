@@ -27,8 +27,6 @@ public class PipeScrew : Machine {
         if (this.isBroken && this.canFixPipe) {
             if (Input.GetButtonDown(buttonPress)) {
                 this.timesToPress--;
-                Debug.Log("Funcionou + " + this.timesToPress.ToString());
-            
             }
 
             if (this.timesToPress == 0) {
@@ -59,7 +57,6 @@ public class PipeScrew : Machine {
             this.Reset();
         }
         this.canFixPipe = false;
-        Debug.Log("Reset times to press = " + timesToPress.ToString());
     }
 
     private void Reset() {
@@ -73,7 +70,6 @@ public class PipeScrew : Machine {
             this.timer = this.timeToFix;
             
             GetComponent<SpriteRenderer>().sprite = spritePipeBroken;
-            Debug.Log("Stop pipe");
         }
     }
 
@@ -81,6 +77,8 @@ public class PipeScrew : Machine {
         if (this.isBroken) {
             if (this.timer <= 0.0f) {
                 timer = 0.0f;
+                Time.timeScale = 0f;
+                PauseController.isEndGame = true;
                 loseMenu.SetActive(true);
             }
             else {

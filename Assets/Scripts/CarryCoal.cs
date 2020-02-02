@@ -64,7 +64,6 @@ public class CarryCoal : MonoBehaviour {
 
         animator.SetBool("isGettingCoal", true);
         if (this.canGetCoal && this.GetCoalAction()) {
-            Debug.Log("Got coal");
             this.carryingCoal = true;
             SoundManagerScript.playSound("shovel coal pickup");
             animator.SetBool("isHoldingShovel", true);
@@ -75,7 +74,6 @@ public class CarryCoal : MonoBehaviour {
     private void DropCoal() {
 
         if (this.carryingCoal && this.DropCoalAction()) {
-            Debug.Log("Dropped coal");
             this.carryingCoal = false;
             animator.SetBool("isHoldingShovel", false);
             Debug.Log(animator.GetBool("isHoldingShovel"));

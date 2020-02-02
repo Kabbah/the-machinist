@@ -70,7 +70,6 @@ public class PlayerController : MonoBehaviour {
 
         if (transform.position.x < _posX)
          {
-             //Debug.Log("Moving left - " + transform.position.x);
              if (direction == 1)
              {
                 transform.localScale = new Vector2(someScale, transform.localScale.y);
@@ -79,7 +78,6 @@ public class PlayerController : MonoBehaviour {
          }
          else
          {
-             //Debug.Log("Moving right - " + transform.position.x);
              if (direction == -1)
              {
                 transform.localScale = new Vector2(-someScale, transform.localScale.y);

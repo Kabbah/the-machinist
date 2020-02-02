@@ -9,25 +9,30 @@ public class timerController : MonoBehaviour
 	public float timer;
 	public Text timerText;
     public GameObject victoryMenu;
+    public GameController gameController;
     private Dictionary<int, GameObject> incidents;
 
     public LevelInterface levelConfig;
 
     void Start() {
+        Time.timeScale = 1f;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         this.levelConfig = this.GetComponent<LevelInterface>();
         this.timer = levelConfig.getLevelTime();
         this.incidents = levelConfig.getIncidents();
     }
 
     void Update() {
-        if(timer <= 0.0f){
+        if(timer <= 0.0f && !victoryMenu.activeSelf){
             timer = 0.0f;
-        	victoryMenu.SetActive(true);
+            Time.timeScale = 0f;
+            gameController.UpdateBestUnlockStage();
+            PauseController.isEndGame = true;
+            victoryMenu.SetActive(true);
         } else {
             timer -= Time.deltaTime;
             int second = Mathf.FloorToInt(timer);
             if(incidents.ContainsKey(second)) {
-                Debug.Log(second);
                 GameObject machine = incidents[second];
                 machine.GetComponent<Machine>().stop();
                 incidents.Remove(second);
