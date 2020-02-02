@@ -39,7 +39,6 @@ public class ButtonActions : MonoBehaviour {
     }
 
     public void GoToNextStage() {
-        gameController.UpdateBestUnlockStage();
         gameController.SetActualStage(gameController.GetBestUnlockedStage());
         SceneManager.LoadScene("world" + gameController.GetActualStage().ToString(), LoadSceneMode.Single);
     }

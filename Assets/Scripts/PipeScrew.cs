@@ -66,6 +66,7 @@ public class PipeScrew : Machine {
         if (this.isBroken) {
             if (this.timer <= 0.0f) {
                 timer = 0.0f;
+                Time.timeScale = 0f;
                 loseMenu.SetActive(true);
             }
             else {

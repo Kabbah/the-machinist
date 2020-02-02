@@ -24,7 +24,8 @@ public class Furnace : Machine {
         if(this.isBroken) {
             if(this.timer <= 0.0f){
                 timer = 0.0f;
-        	    loseMenu.SetActive(true);
+                Time.timeScale = 1f;
+                loseMenu.SetActive(true);
             } else {
                 timer -= Time.deltaTime;
             }
