@@ -8,6 +8,10 @@ public class PauseController : MonoBehaviour {
     public static bool isPaused = false;
     public GameObject pauseMenu;
 
+    void Start() {
+        isPaused = false;
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape)) {
             togglePauseMenu();
@@ -27,9 +31,5 @@ public class PauseController : MonoBehaviour {
         } else {
             Time.timeScale = 1f;
         }
-    }
-
-    public void nextLevelButtonAction() {
-        SceneManager.LoadScene("worldTestVitor", LoadSceneMode.Single);
     }
 }
