@@ -46,7 +46,6 @@ public class timerController : MonoBehaviour
         if (this.progess != null) {
             this.progess.SetProgress((this.initialTimer - this.timer) / this.initialTimer);
         }
-        timerText.text = "Time: " + String.Format("{0:#,###.#}", timer);
 
     }
 }
