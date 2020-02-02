@@ -27,6 +27,7 @@ public class timerController : MonoBehaviour
             timer = 0.0f;
             Time.timeScale = 0f;
             gameController.UpdateBestUnlockStage();
+            PauseController.isEndGame = true;
             victoryMenu.SetActive(true);
         } else {
             timer -= Time.deltaTime;

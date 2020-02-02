@@ -67,6 +67,7 @@ public class Valve : Machine {
             if(this.timer <= 0.0f){
                 timer = 0.0f;
                 Time.timeScale = 0f;
+                PauseController.isEndGame = true;
                 loseMenu.SetActive(true);
             } else {
                 timer -= Time.deltaTime;

@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour {
 
     public static bool isPaused = false;
+    public static bool isEndGame = false;
     public GameObject pauseMenu;
 
     void Start() {
         isPaused = false;
+        isEndGame = false;
     }
 
     void Update() {
@@ -23,6 +25,9 @@ public class PauseController : MonoBehaviour {
     }
 
     public void togglePauseMenu() {
+        if(isEndGame) {
+            return;
+        }
         isPaused = !isPaused;
         pauseMenu.SetActive(isPaused);
 
