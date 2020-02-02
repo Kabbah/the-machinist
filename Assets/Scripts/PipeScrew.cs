@@ -47,12 +47,21 @@ public class PipeScrew : Machine {
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision) {
-        if (isBroken && collision.CompareTag("Player")) {
-            this.Reset();
+    void OnTriggerExit2D(Collider2D collision) { 
+        if (collision.CompareTag("Player")) {
+            transform.Find("pipeTooltip").gameObject.SetActive(false);
+            if(isBroken) {
+                this.Reset();
+            }
         }
         animator.SetBool("isHittingPipe", false);
         this.canFixPipe = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            transform.Find("pipeTooltip").gameObject.SetActive(true);
+        }
     }
 
     private void Reset() {
