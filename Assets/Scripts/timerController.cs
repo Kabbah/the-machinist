@@ -7,9 +7,11 @@ using System;
 public class timerController : MonoBehaviour
 {
 	public float timer;
+    private float initialTimer;
 	public Text timerText;
     public GameObject victoryMenu;
     public GameController gameController;
+    private ProgressController progess;
     private Dictionary<int, GameObject> incidents;
 
     public LevelInterface levelConfig;
@@ -17,8 +19,10 @@ public class timerController : MonoBehaviour
     void Start() {
         Time.timeScale = 1f;
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        this.progess = GameObject.Find("progressZeppelin").GetComponent<ProgressController>();
         this.levelConfig = this.GetComponent<LevelInterface>();
         this.timer = levelConfig.getLevelTime();
+        this.initialTimer = levelConfig.getLevelTime();
         this.incidents = levelConfig.getIncidents();
     }
 
@@ -39,6 +43,9 @@ public class timerController : MonoBehaviour
             }
         }
 
+        if (this.progess != null) {
+            this.progess.SetProgress((this.initialTimer - this.timer) / this.initialTimer);
+        }
         timerText.text = "Time: " + String.Format("{0:#,###.#}", timer);
 
     }

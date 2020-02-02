@@ -356,8 +356,8 @@ TextureImporter:
       name: ladder
       rect:
         serializedVersion: 2
-        x: 385
-        y: 408
+        x: 409
+        y: 406
         width: 22
         height: 72
       alignment: 0
@@ -1049,12 +1049,12 @@ TextureImporter:
       name: assets_17
       rect:
         serializedVersion: 2
-        x: 384
+        x: 408
         y: 360
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1070,12 +1070,12 @@ TextureImporter:
       name: assets_16
       rect:
         serializedVersion: 2
-        x: 384
+        x: 408
         y: 384
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1091,12 +1091,12 @@ TextureImporter:
       name: assets_18
       rect:
         serializedVersion: 2
-        x: 384
+        x: 408
         y: 408
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
