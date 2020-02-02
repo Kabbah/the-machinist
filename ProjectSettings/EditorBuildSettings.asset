@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/worldSelectMenu.unity
     guid: a8c28a57b47fea245b79653604f42648
   - enabled: 1
-    path: Assets/Scenes/worldS/world0.unity
+    path: Assets/Scenes/worlds/world0.unity
     guid: 180f6b6e91d11aad7a20eb257ab76670
   - enabled: 1
-    path: Assets/Scenes/worldS/world1.unity
-    guid: 16b94702d23a2e74c85d5fcfa3e4f2ff
+    path: Assets/Scenes/worlds/world1.unity
+    guid: db3a77b730ca40245a7a66321f1d9629
   - enabled: 1
-    path: Assets/Scenes/worldS/world2.unity
-    guid: 89e3ae8d7371baf4bb49f0cc877d3ed9
+    path: Assets/Scenes/worlds/world2.unity
+    guid: b4876be32b6c3f74ea42cf6023f29a28
   m_configObjects: {}
