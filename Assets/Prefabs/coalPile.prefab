@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137196781655825473}
   - component: {fileID: 2137196781655825472}
+  - component: {fileID: 6169109907036399765}
   - component: {fileID: 2137196781655825474}
   m_Layer: 0
   m_Name: coalPile
@@ -28,7 +29,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.32, y: 2.4, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4231709912998520291}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6169109907036399765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137196781655825487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac258b986f7b0846ac17faa13cdaefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &2137196781655825474
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -109,3 +123,103 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.41}
   m_EdgeRadius: 0
+--- !u!1001 &1649151962
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2137196781655825473}
+    m_Modifications:
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.21945
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272764, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_Name
+      value: coalTooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272764, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231709912491272766, guid: c89faafba125ed4418cc4040509557d6,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c89faafba125ed4418cc4040509557d6, type: 3}
+--- !u!4 &4231709912998520291 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4231709912491272761, guid: c89faafba125ed4418cc4040509557d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1649151962}
+  m_PrefabAsset: {fileID: 0}

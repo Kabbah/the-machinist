@@ -45,4 +45,17 @@ public class Furnace : Machine {
         machineTimerBar.closeBar();
         animator.SetBool("FurnaceIsBroken", false);
     }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (isBroken && collision.CompareTag("Player")) {
+            transform.Find("furnaceTooltip").gameObject.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            transform.Find("furnaceTooltip").gameObject.SetActive(false);
+        }
+    }
+
 }

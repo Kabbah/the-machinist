@@ -40,6 +40,12 @@ public class Valve : Machine {
         }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision) {
+        if(isBroken && collision.gameObject.CompareTag("Player")) {
+            transform.Find("valveTooltip").gameObject.SetActive(true);
+        }
+    }
+
     public override void fix() {
         this.isBroken = false;
         machineTimerBar.closeBar();
@@ -52,7 +58,8 @@ public class Valve : Machine {
     }
 
     void OnTriggerExit2D(Collider2D collision) {
-        if (this.isBroken && collision.CompareTag("Player")) {
+        if (collision.CompareTag("Player")) {
+            transform.Find("valveTooltip").gameObject.SetActive(false);
             this.Reset();
         }
     }
