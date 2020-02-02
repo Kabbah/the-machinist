@@ -10,12 +10,52 @@ public class PlayerController : MonoBehaviour {
     public bool isOnLadder = false;
 
     private Rigidbody2D rb;
+    
+    public float runSpeed = 30.0f;
+
+    public float horizontalMove = 0.0f;
+    public Animator animator;
+
+    public float direction;
+    public float someScale;
+    public float _posX;
 
     void Start() {
+
+        direction = 1;
+        _posX = transform.position.x;
+
         this.rb = this.gameObject.GetComponent<Rigidbody2D>();
+        
+        someScale = transform.localScale.x; // assuming this is facing right
     }
 
     void Update() {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        if (transform.position.x < _posX)
+         {
+             //Debug.Log("Moving left - " + transform.position.x);
+             if (direction == 1)
+             {
+                transform.localScale = new Vector2(someScale, transform.localScale.y);
+                 direction = -1;
+             }
+         }
+         else
+         {
+             //Debug.Log("Moving right - " + transform.position.x);
+             if (direction == -1)
+             {
+                transform.localScale = new Vector2(-someScale, transform.localScale.y);
+                 direction = 1;
+             }
+         }
+ 
+         _posX = transform.position.x;
+
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
@@ -48,5 +88,6 @@ public class PlayerController : MonoBehaviour {
             Vector2 movement = new Vector2(0, verticalMovement);
             this.rb.AddForce(this.force * movement);
         }
+
     }
 }
