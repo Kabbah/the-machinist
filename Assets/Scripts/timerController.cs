@@ -33,8 +33,6 @@ public class timerController : MonoBehaviour
             int bestUnlockStage =  gameController.UpdateBestUnlockStage();
             PauseController.isEndGame = true;
             victoryMenu.SetActive(true);
-            Debug.Log("levelConfig.getLevelNumber():"  + levelConfig.getLevelNumber());
-            Debug.Log("bestUnlockStage: " + bestUnlockStage);
             victoryMenu.transform.Find("NextLevelButton").gameObject.SetActive(levelConfig.getLevelNumber() != bestUnlockStage);
         } else {
             timer -= Time.deltaTime;
