@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level5Config : MonoBehaviour, LevelInterface {
     public int getLevelNumber() {
-        return 11;
+        return 5;
     }
 
     public Dictionary<int, GameObject> getIncidents() {
